@@ -1,27 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    @apply text-neutral-600 font-lexend;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+a {
+    @apply cursor-pointer hover:text-stone-400 transition duration-300 ease-in-out;
+}
+
+.react-photo-album--image {
+    transition: opacity 124ms linear, transform 124ms linear;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.react-photo-album--image:hover {
+    opacity: 50%;
 }
