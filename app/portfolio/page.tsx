@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 import Modal from '../components/Modal';
 import Hero from '../components/Hero';
 import { Fade } from "react-awesome-reveal";
@@ -54,7 +55,7 @@ const Page: React.FC = () => {
     }, [searchParams]);
 
     return (
-        <>
+        <Suspense fallback={<div>Loading...</div>}>
             <Fade>
                 <Hero
                     imageUrl="https://storage.googleapis.com/photo_website/photo_website-26.jpg"
@@ -95,7 +96,7 @@ const Page: React.FC = () => {
                 onClose={closeModal}
                 imageUrl={image}
             />
-        </>
+        </Suspense>
     );
 };
 
