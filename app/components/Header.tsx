@@ -41,19 +41,19 @@ const Header = () => {
 
                 <nav
                     aria-label="Mobile Navigation"
-                    className={`absolute top-full z-50 justify-end text-end right-0 min-w-max bg-white transition-all duration-200 ease-in-out lg:hidden font-cuba ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
+                    className={`absolute ps-20 top-full z-50 justify-end text-end right-0 min-w-max bg-neutral-200 transition-all duration-200 ease-in-out lg:hidden font-cuba ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
                 >
-                    <Link href="/portfolio" aria-label="View Portfolio" className="block p-4 lg:p-0">Portfolio</Link>
-                    <Link href="/contacts" aria-label="Contact Information" className="block p-4 lg:p-0">Contacts</Link>
-                    <Link href="/about" aria-label="Learn About Glafira Veretennikova" className="block p-4 lg:p-0">About</Link>
-                    <Link href="/staging_tips" aria-label="Get Staging Tips" className="block p-4 lg:p-0">Staging Tips</Link>
+                    <Link onClick={toggleMenu} href="/portfolio" aria-label="View Portfolio" className="block p-4 lg:p-0">Portfolio</Link>
+                    <Link onClick={toggleMenu} href="/about" aria-label="Learn About Glafira Veretennikova" className="block p-4 lg:p-0">About</Link>
+                    <Link onClick={toggleMenu} href="/contacts" aria-label="Contact Information" className="block p-4 lg:p-0">Contacts</Link>
+                    {/* <Link onClick={toggleMenu} href="/staging_tips" aria-label="Get Staging Tips" className="block p-4 lg:p-0">Staging Tips</Link> */}
                 </nav>
 
                 <nav aria-label="Main Navigation" className="hidden lg:flex space-x-4 gap-6 font-cuba">
                     <Link href="/portfolio" aria-label="View Portfolio">Portfolio</Link>
-                    <Link href="/contacts" aria-label="Contact Information">Contacts</Link>
                     <Link href="/about" aria-label="Learn About Glafira Veretennikova">About</Link>
-                    <Link href="/staging_tips" aria-label="Get Staging Tips">Staging Tips</Link>
+                    <Link href="/contacts" aria-label="Contact Information">Contacts</Link>
+                    {/* <Link href="/staging_tips" aria-label="Get Staging Tips">Staging Tips</Link> */}
                 </nav>
             </div>
         </header>

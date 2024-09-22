@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
-import Modal from '../components/Modal';
+import Lightbox from "yet-another-react-lightbox";
 import Hero from '../components/Hero';
 import { Fade } from "react-awesome-reveal";
 import { ColumnsPhotoAlbum } from "react-photo-album";
@@ -20,23 +20,12 @@ const categories = [
 ];
 
 const Page: React.FC = () => {
-    const [isModalOpen, setModalOpen] = useState(false);
-    const [image, setImage] = useState('');
     const [filteredPhotos, setFilteredPhotos] = useState(photos);
     const [activeCategory, setActiveCategory] = useState('all');
+    const [index, setIndex] = useState(-1);
 
     const router = useRouter();
     const searchParams = useSearchParams();
-
-    const openModal = (src: string) => {
-        setImage(src);
-        setModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setImage('');
-        setModalOpen(false);
-    };
 
     const handleCategoryChange = (categorySlug: string) => {
         setActiveCategory(categorySlug);
@@ -60,15 +49,29 @@ const Page: React.FC = () => {
                 <Hero
                     imageUrl="https://storage.googleapis.com/photo_website/photo_website-26.jpg"
                     imageAlt="Beautiful modern home in real estate photography"
-                    heading="Capture Stunning Real Estate Photos"
-                    subheading="Professional real estate photography that makes your property stand out"
+                    heading="Welcome to My Photography Journey"
+                    subheading="I love capturing the essence of homes. Explore my portfolio to see the spaces that inspire me and the stories they tell."
                 />
-                <div className='container px-4 mx-auto flex items-center flex-col md:flex-row justify-between py-16 md:py-24'>
+                <div className='md:hidden py-8 flex items-center gap-8 justify-center'>
+                    <p className='font-bold'>Categories: </p>
+                    <select
+                        value={activeCategory}
+                        onChange={(e) => handleCategoryChange(e.target.value)}
+                        className="border rounded p-2"
+                    >
+                        {categories.map((category) => (
+                            <option key={category.slug} value={category.slug}>
+                                {category.name}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+                <div className='container px-4 mx-auto hidden md:flex items-center flex-col md:flex-row justify-between py-16 md:py-24'>
                     {categories.map((category) => (
                         <a
                             key={category.slug}
                             onClick={() => handleCategoryChange(category.slug)}
-                            className={`cursor-pointer ${activeCategory === category.slug ? 'underline' : ''}`}
+                            className={`cursor-pointer ${activeCategory === category.slug ? 'underline font-bold text-stone-800' : ''}`}
                         >
                             {category.name}
                         </a>
@@ -78,23 +81,20 @@ const Page: React.FC = () => {
                     <div className="lg:hidden">
                         <ColumnsPhotoAlbum photos={filteredPhotos}
                             columns={2}
-                            onClick={(e) => {
-                                openModal(e.photo.src);
-                            }} />
+                            onClick={({ index }) => setIndex(index)} />
                     </div>
                     <div className="hidden lg:block">
                         <ColumnsPhotoAlbum photos={filteredPhotos}
                             columns={3}
-                            onClick={(e) => {
-                                openModal(e.photo.src);
-                            }} />
+                            onClick={({ index }) => setIndex(index)} />
                     </div>
                 </div>
             </Fade>
-            <Modal
-                isOpen={isModalOpen}
-                onClose={closeModal}
-                imageUrl={image}
+            <Lightbox
+                slides={filteredPhotos}
+                open={index >= 0}
+                index={index}
+                close={() => setIndex(-1)}
             />
         </Suspense>
     );

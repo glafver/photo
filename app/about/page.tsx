@@ -3,11 +3,14 @@ import Hero from '../components/Hero';
 import { Fade } from "react-awesome-reveal";
 
 const title = "Hi, my name is Glafira";
-const p_1 = `
-    I’m passionate about capturing the unique beauty and personality of your home. 
-    With a keen eye for detail and a love for creating stunning visuals, I bring a personal touch to every shoot. 
-    Whether it’s the vibrant daylight that showcases your home’s lively spirit or the enchanting twilight that adds a cozy, inviting glow, 
-    my goal is to highlight what makes your space truly special.`;
+const p1 = `I’m a passionate photographer who loves capturing the beauty of home design. Growing up in an artistic family — my mom was an art historian and my dad a furniture designer — meant I was surrounded by creativity from a young age. This upbringing gave me a keen eye for beauty and a natural sense of harmony.`;
+
+const p2 = `Alongside my photography, I’m also a frontend developer. I love to combine my creative and technical skills. With over 15 years of experience in administration and management, I’ve honed my organizational and problem-solving abilities.`;
+
+const p3 = `I’m 36 years old and currently based in Malmö, Sweden. I relocated here five years ago from St. Petersburg, Russia. Fluent in both Swedish and English, I enjoy connecting with people from different backgrounds. I believe in kindness, respect, and finding common ground, which guide me in both my personal and professional life.`;
+
+const p4 = `Traveling and exploring new cultures are my other passions. I love seeing how different people live and drawing inspiration from the world around me. Whether I’m behind the camera or coding a new project, I aim to create beauty and share warmth in everything I do.`;
+
 
 const Page: React.FC = () => {
     return (
@@ -16,8 +19,8 @@ const Page: React.FC = () => {
                 <Hero
                     imageUrl="https://storage.googleapis.com/photo_website/photo_website-10.jpg"
                     imageAlt="Beautiful modern home in real estate photography"
-                    heading="Capture Stunning Real Estate Photos"
-                    subheading="Professional real estate photography that makes your property stand out"
+                    heading="About Me"
+                    subheading="I cherish the moments spent capturing the heart and soul of every home."
                 />
             </Fade>
             <section className="py-16 lg:py-32 bg-neutral-100">
@@ -31,8 +34,11 @@ const Page: React.FC = () => {
                             />
                         </div>
                         <div className="md:w-1/2 p-6">
-                            <h3 className="text-3xl font-semibold mb-12 font-cuba text-center">{title}</h3>
-                            <p className="mb-12">{p_1}</p>
+                            <h3 className="text-3xl font-semibold mb-12 font-cuba text-center leading-[2]">{title}</h3>
+                            <p className="mb-6">{p1}</p>
+                            <p className="mb-6">{p2}</p>
+                            <p className="mb-6">{p3}</p>
+                            <p className="mb-6">{p4}</p>
                         </div>
                     </div>
                 </div>
@@ -42,4 +48,4 @@ const Page: React.FC = () => {
     );
 };
 
-export default Page;
+export default Page;;

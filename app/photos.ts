@@ -239,6 +239,126 @@ const photos = [
         height: 800,
         category: "hall"
     },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-41.jpg",
+        width: 1200,
+        height: 800,
+        category: "hall"
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-42.jpg",
+        width: 1200,
+        height: 800,
+        category: 'bathroom'
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-43.jpg",
+        width: 1200,
+        height: 800,
+        category: 'outside'
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-44.jpg",
+        width: 790,
+        height: 1064,
+        category: "bedroom"
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-45.jpg",
+        width: 1200,
+        height: 800,
+        category: "dusk"
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-46.jpg",
+        width: 1200,
+        height: 800,
+        category: "bathroom"
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-47.jpg",
+        width: 1200,
+        height: 800,
+        category: "bedroom"
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-48.jpg",
+        width: 790,
+        height: 1064,
+        category: "bedroom"
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-49.jpg",
+        width: 1200,
+        height: 800,
+        category: 'outside'
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-50.jpg",
+        width: 1200,
+        height: 800,
+        category: "bathroom"
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-51.jpg",
+        width: 1200,
+        height: 800,
+        category: "dusk"
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-52.jpg",
+        width: 1200,
+        height: 800,
+        category: 'bedroom'
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-53.jpg",
+        width: 1200,
+        height: 800,
+        category: "outside"
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-54.jpg",
+        width: 1200,
+        height: 800,
+        category: "bathroom"
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-55.jpg",
+        width: 790,
+        height: 1064,
+        category: "hall"
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-56.jpg",
+        width: 1200,
+        height: 800,
+        category: "outside"
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-57.jpg",
+        width: 790,
+        height: 1064,
+        category: "living"
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-58.jpg",
+        width: 1200,
+        height: 800,
+        category: "outside"
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-59.jpg",
+        width: 1200,
+        height: 800,
+        category: "bedroom"
+    },
+    {
+        src: "https://storage.googleapis.com/photo_website/photo_website-60.jpg",
+        width: 1200,
+        height: 800,
+        category: "hall"
+    },
 ];
 
 export default photos;
