@@ -1,5 +1,4 @@
 "use client";
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { IoIosMenu } from 'react-icons/io';
@@ -12,21 +11,11 @@ const Header = () => {
     };
 
     return (
-        <header className="p-5 lg:p-[2%] relative">
+        <header className="py-3 px-5 lg:p-[2%] relative">
             <div className="container flex justify-between items-center mx-auto">
-                <div className="flex items-center">
-                    <Link href="/">
-                        <Image
-                            src="https://storage.googleapis.com/photo_website/GV_logo_dark.png"
-                            alt="Glafira Veretennikova Logo"
-                            width={125}
-                            height={125}
-                            priority={true}
-                        />
-                    </Link>
-                    <p className="ml-4">
-                        <strong>Glafira Veretennikova</strong>
-                    </p>
+                <div className="flex flex-col items-center font-semibold">
+                    <p className='tracking-[6px] text-3xl md:text-5xl'>GLAFIRA</p>
+                    <p className='text-sm md:text-lg md:ms-[5px] tracking-[6px]'>PHOTOGRAPHY</p>
                 </div>
 
                 <div className="block lg:hidden">

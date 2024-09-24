@@ -3,29 +3,17 @@ import Link from 'next/link';
 import { MdOutlineEmail, MdLocalPhone } from "react-icons/md";
 import { IoLogoInstagram } from "react-icons/io5";
 import { FaFacebookF, FaLinkedin } from "react-icons/fa6";
-import Image from 'next/image';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-neutral-800 text-neutral-100 pt-8 pb-3">
+        <footer className="bg-neutral-800 text-neutral-100 pt-8 pb-8">
             <div className="container mx-auto px-4">
 
-                <div className="flex gap-8 flex-col md:flex-row justify-between items-center">
+                <div className="flex gap-8 flex-col md:flex-row justify-between items-start">
 
-                    <div className="flex flex-col">
-                        <Link href="/">
-                            <Image
-                                className='m-auto md:m-0'
-                                src="https://storage.googleapis.com/photo_website/GV_logo_light.png"
-                                alt="Glafira Veretennikova Logo"
-                                width={125}
-                                height={125}
-                                priority={true}
-                            />
-                        </Link>
-                        <p className="mt-3 hidden md:block">
-                            Glafira Veretennikova
-                        </p>
+                    <div className="flex flex-col items-center font-semibold">
+                        <p className='tracking-[6px] text-3xl'>GLAFIRA</p>
+                        <p className='text-sm tracking-[6px]'>PHOTOGRAPHY</p>
                     </div>
 
                     <div className="text-left">
@@ -76,12 +64,12 @@ const Footer: React.FC = () => {
                                 <FaLinkedin />
                             </a>
                         </div>
-                        <p className="mt-6 md:mt-0 text-center md:text-start text-neutral-600">
-                            {new Date().getFullYear()}
-                            <a className="ms-3" href="https://www.linkedin.com/in/glafver/">by @glafver</a>
-                        </p>
                     </div>
                 </div>
+                {/* <p className="mt-6 text-center text-neutral-600">
+                    {new Date().getFullYear()}
+                    <a className="ms-3" href="https://www.linkedin.com/in/glafver/">by @glafver</a>
+                </p> */}
             </div>
         </footer>
     );
