@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <footer className="bg-neutral-800 text-neutral-100 pt-8 pb-8">
             <div className="container mx-auto px-4">
 
-                <div className="flex gap-8 flex-col md:flex-row justify-between items-start">
+                <div className="flex gap-8 flex-col md:flex-row justify-between items-center md:items-start">
 
                     <div className="flex flex-col items-center font-semibold">
                         <p className='tracking-[6px] text-3xl'>GLAFIRA</p>
