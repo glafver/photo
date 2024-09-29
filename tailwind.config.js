@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        lexend: ['Lexend'],
-        cuba: ['Playwrite CU']
+        lexend: ['Lexend', 'sans-serif'],
+        cuba: ['Playwrite CU', 'sans-serif']
       },
     },
   },

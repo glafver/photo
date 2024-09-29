@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 body {
-    @apply text-neutral-600 font-lexend;
+    @apply text-neutral-800 font-lexend;
 }
 
 a {

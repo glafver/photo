@@ -34,14 +34,12 @@ const ServicesSection: React.FC = () => {
                                 </div>
                             </div>
                             <div className="flex-1 p-6 flex justify-center w-full aspect-[1.5]">
-                                {/* <div className="relative w-full h-0 pb-[56.25%]"> */}
                                 <img
                                     src={service.image}
                                     alt={service.alt}
                                     className="w-full h-full object-cover rounded"
                                     loading="lazy"
                                 />
-                                {/* </div> */}
                             </div>
                         </div>
                     ))}

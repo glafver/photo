@@ -10,19 +10,15 @@ const Footer: React.FC = () => {
             <div className="container mx-auto px-4">
 
                 <div className="flex gap-8 flex-col md:flex-row justify-between items-center md:items-start">
-
-                    <div className="flex flex-col items-center font-semibold">
+                    <Link href="/" aria-label="Main Page" className="flex flex-col items-center font-semibold hover:text-neutral-100">
                         <p className='tracking-[6px] text-3xl'>GLAFIRA</p>
                         <p className='text-sm tracking-[6px]'>PHOTOGRAPHY</p>
-                    </div>
-
-                    <div className="text-left">
-                        <div className="flex flex-col justify-center items-center md:items-start md:justify-start">
-                            <Link href="/portfolio" aria-label="View Portfolio">Portfolio</Link>
-                            <Link href="/about" aria-label="Learn About Glafira Veretennikova">About</Link>
-                            <Link href="/contacts" aria-label="Contact Information">Contacts</Link>
-                            {/* <Link href="/staging_tips" aria-label="Get Staging Tips">Staging Tips</Link> */}
-                        </div>
+                    </Link>
+                    <div className="flex flex-col justify-center items-center md:items-start">
+                        <Link href="/portfolio" aria-label="View Portfolio">Portfolio</Link>
+                        <Link href="/about" aria-label="Learn About Glafira Veretennikova">About</Link>
+                        <Link href="/contacts" aria-label="Contact Information">Contacts</Link>
+                        <Link href="/staging_tips" aria-label="Get Staging Tips">Staging Tips</Link>
                     </div>
 
                     <div className="text-center md:text-left mb-4 md:mb-0">
@@ -64,12 +60,12 @@ const Footer: React.FC = () => {
                                 <FaLinkedin />
                             </a>
                         </div>
+                        <p className=" text-neutral-600">
+                            {new Date().getFullYear()}
+                            <a className="ms-3" href="https://www.linkedin.com/in/glafver/">by @glafver</a>
+                        </p>
                     </div>
                 </div>
-                {/* <p className="mt-6 text-center text-neutral-600">
-                    {new Date().getFullYear()}
-                    <a className="ms-3" href="https://www.linkedin.com/in/glafver/">by @glafver</a>
-                </p> */}
             </div>
         </footer>
     );
