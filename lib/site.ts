@@ -1,7 +1,6 @@
 export const siteConfig = {
     name: "Glafira Veretennikova",
-    // TODO: replace with your production URL (used for SEO, sitemap, robots and OpenGraph)
-    url: "https://example.com",
+    url: "https://photo.glafira.se",
     title: "Glafira Veretennikova | Real Estate Photographer in Malmö & Lund",
     description:
         "Professional real estate photography in Malmö, Lund, and Skåne. High-quality property images by Glafira Veretennikova.",
