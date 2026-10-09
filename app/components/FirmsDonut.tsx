@@ -11,7 +11,7 @@ const FirmsDonut: React.FC = () => {
                     color: f.color,
                 }))}
                 centerValue="17"
-                centerLabel="firms"
+                centerLabel="agencies"
             />
             <ul className="space-y-4 text-left">
                 {stats.firms.map((f) => (
