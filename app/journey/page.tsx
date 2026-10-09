@@ -140,7 +140,7 @@ const Page: React.FC = () => {
             <Fade>
                 <section className="py-16 lg:py-24">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-2xl lg:text-3xl font-cuba text-center mb-4">The firms I work with</h2>
+                        <h2 className="text-2xl lg:text-3xl font-cuba text-center mb-4">The real estate agencies I work with</h2>
                         <p className="text-center max-w-2xl mx-auto mb-10 text-neutral-600">
                             From large agencies to small local offices — these are the teams that trust me with their listings.
                         </p>
