@@ -6,6 +6,7 @@ import CitationSection from './components/CitationSection';
 import ServicesSection from './components/ServicesSection';
 import StatsBand from "./components/StatsBand";
 import FirmsDonut from "./components/FirmsDonut";
+import LocationsSection from "./components/LocationsSection";
 import PhotoAlbum from "./components/PhotoAlbum";
 import ButtonDark from "./components/ButtonDark";
 import AboutSection from './components/AboutSection';
@@ -66,6 +67,7 @@ const Page: React.FC = () => {
             <ButtonDark text="Go to portfolio" src='/portfolio' />
           </div>
         </section>
+        <LocationsSection />
         <AboutSection />
         <Lightbox
           slides={displayedPhotos}
