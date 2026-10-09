@@ -32,9 +32,9 @@ export const stats = {
     ],
 
     propertyTypes: [
-        { type: "Apartments", count: 799, percentage: 76 },
-        { type: "Houses", count: 241, percentage: 23 },
-        { type: "Summer houses & other", count: 15, percentage: 1 },
+        { type: "Apartments", count: 799, percentage: 76, color: "#94354f" },
+        { type: "Houses", count: 241, percentage: 23, color: "#c57388" },
+        { type: "Summer houses & other", count: 15, percentage: 1, color: "#e9c4cd" },
     ],
 
     topLocations: [

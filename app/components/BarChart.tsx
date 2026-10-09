@@ -46,10 +46,12 @@ const BarChart: React.FC<BarChartProps> = ({ data, format = (n) => String(n) }) 
                             style={{ height: inView ? `${(d.value / max) * 100}%` : "0%" }}
                         />
                     </div>
-                    <span className="text-[10px] lg:text-xs text-neutral-600 whitespace-nowrap">{d.label}</span>
-                    {d.note && (
-                        <span className="text-[9px] lg:text-[10px] text-brand-600 italic -mt-1">{d.note}</span>
-                    )}
+                    <div className="flex flex-col items-center gap-0.5 min-h-9">
+                        <span className="text-[10px] lg:text-xs text-neutral-600 whitespace-nowrap">{d.label}</span>
+                        {d.note && (
+                            <span className="text-[9px] lg:text-[10px] text-brand-600 italic">{d.note}</span>
+                        )}
+                    </div>
                 </div>
             ))}
         </div>

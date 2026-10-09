@@ -3,6 +3,7 @@ import { Fade } from "react-awesome-reveal";
 import Hero from "../components/Hero";
 import StatsCounter from "../components/StatsCounter";
 import BarChart from "../components/BarChart";
+import DonutChart from "../components/DonutChart";
 import ButtonDark from "../components/ButtonDark";
 import { stats } from "../../lib/stats";
 
@@ -88,21 +89,25 @@ const Page: React.FC = () => {
                         <p className="text-center mb-10 text-neutral-600">
                             From cosy apartments to spacious villas — every home deserves its best light.
                         </p>
-                        <div className="space-y-6">
-                            {stats.propertyTypes.map((p) => (
-                                <div key={p.type}>
-                                    <div className="flex justify-between text-sm mb-1.5">
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-10">
+                            <DonutChart
+                                data={stats.propertyTypes.map((p) => ({
+                                    label: p.type,
+                                    percentage: p.percentage,
+                                    color: p.color,
+                                }))}
+                                centerValue="1,055"
+                                centerLabel="homes"
+                            />
+                            <ul className="space-y-4 text-left">
+                                {stats.propertyTypes.map((p) => (
+                                    <li key={p.type} className="flex items-center gap-3">
+                                        <span className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: p.color }} />
                                         <span>{p.type}</span>
-                                        <span className="text-neutral-500 tabular-nums">{p.percentage}%</span>
-                                    </div>
-                                    <div className="h-3 bg-greige-100 rounded-full overflow-hidden">
-                                        <div
-                                            className="h-full rounded-full bg-brand-400"
-                                            style={{ width: `${p.percentage}%` }}
-                                        />
-                                    </div>
-                                </div>
-                            ))}
+                                        <span className="ml-auto pl-6 text-neutral-500 tabular-nums">{p.percentage}%</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 </section>
