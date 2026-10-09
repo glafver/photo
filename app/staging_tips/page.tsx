@@ -102,7 +102,7 @@ const Page: React.FC = () => {
                         {tips.map((tip, index) => (
                             <div
                                 key={tip.id}
-                                className={`py-6 lg:py-12 flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse bg-pastel-cream' : 'md:flex-row bg-white'} items-center`}
+                                className={`py-6 lg:py-12 flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse bg-greige-50' : 'md:flex-row bg-white'} items-center`}
                             >
                                 <div className="flex-1 p-6 flex items-center">
                                     <div className="text-left">

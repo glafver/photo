@@ -5,7 +5,6 @@ interface BarDatum {
     label: string;
     value: number;
     note?: string;
-    color?: string;
 }
 
 interface BarChartProps {
@@ -41,7 +40,9 @@ const BarChart: React.FC<BarChartProps> = ({ data, format = (n) => String(n) }) 
                     <span className="text-[11px] lg:text-xs text-neutral-500 tabular-nums">{format(d.value)}</span>
                     <div className="w-full flex items-end h-40 lg:h-52">
                         <div
-                            className={`w-full rounded-t transition-[height] duration-700 ease-out ${d.color ?? "bg-pastel-peach"}`}
+                            className={`w-full rounded-t transition-[height] duration-700 ease-out ${
+                                d.note ? "bg-brand-200" : "bg-brand-400"
+                            }`}
                             style={{ height: inView ? `${(d.value / max) * 100}%` : "0%" }}
                         />
                     </div>

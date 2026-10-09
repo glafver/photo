@@ -34,7 +34,7 @@ const Page: React.FC = () => {
 
             {/* Key numbers */}
             <Fade>
-                <section className="py-16 lg:py-24 bg-pastel-cream">
+                <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-greige-100">
                     <div className="container mx-auto px-4">
                         <h2 className="text-2xl lg:text-3xl font-cuba text-center mb-12">
                             A few numbers I’m proud of
@@ -67,7 +67,7 @@ const Page: React.FC = () => {
 
             {/* Growth */}
             <Fade>
-                <section className="py-16 lg:py-24 bg-gradient-to-b from-pastel-cream to-pastel-lavender/15">
+                <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-greige-100">
                     <div className="container mx-auto px-4">
                         <h2 className="text-2xl lg:text-3xl font-cuba text-center mb-4">A growing story</h2>
                         <p className="text-center max-w-2xl mx-auto mb-10 text-neutral-600">
@@ -95,9 +95,9 @@ const Page: React.FC = () => {
                                         <span>{p.type}</span>
                                         <span className="text-neutral-500 tabular-nums">{p.percentage}%</span>
                                     </div>
-                                    <div className="h-3 bg-pastel-cream rounded-full overflow-hidden">
+                                    <div className="h-3 bg-greige-100 rounded-full overflow-hidden">
                                         <div
-                                            className={`h-full rounded-full ${p.color}`}
+                                            className="h-full rounded-full bg-brand-400"
                                             style={{ width: `${p.percentage}%` }}
                                         />
                                     </div>
@@ -110,7 +110,7 @@ const Page: React.FC = () => {
 
             {/* Where I work */}
             <Fade>
-                <section className="py-16 lg:py-24 bg-gradient-to-b from-pastel-sky/15 to-pastel-cream">
+                <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-greige-100">
                     <div className="container mx-auto px-4">
                         <h2 className="text-2xl lg:text-3xl font-cuba text-center mb-4">
                             Malmö, Lund &amp; everywhere in between
