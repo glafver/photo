@@ -4,7 +4,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Lightbox from "yet-another-react-lightbox";
 import Hero from '../components/Hero';
 import { Fade } from "react-awesome-reveal";
-import { ColumnsPhotoAlbum } from "react-photo-album";
+import PhotoAlbum from "../components/PhotoAlbum";
 import photos, { categories, type Category } from "../photos";
 
 type CategorySlug = Category | "all";
@@ -71,12 +71,12 @@ function PortfolioGallery() {
                 </div>
                 <div className='container mx-auto px-4 pb-16 lg:pb-32'>
                     <div className="lg:hidden">
-                        <ColumnsPhotoAlbum photos={filteredPhotos}
+                        <PhotoAlbum photos={filteredPhotos}
                             columns={2}
                             onClick={({ index }) => setIndex(index)} />
                     </div>
                     <div className="hidden lg:block">
-                        <ColumnsPhotoAlbum photos={filteredPhotos}
+                        <PhotoAlbum photos={filteredPhotos}
                             columns={3}
                             onClick={({ index }) => setIndex(index)} />
                     </div>

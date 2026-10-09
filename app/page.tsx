@@ -3,7 +3,7 @@ import { Fade } from "react-awesome-reveal";
 import Hero from './components/Hero';
 import CitationSection from './components/CitationSection';
 import ServicesSection from './components/ServicesSection';
-import { ColumnsPhotoAlbum } from "react-photo-album";
+import PhotoAlbum from "./components/PhotoAlbum";
 import ButtonDark from "./components/ButtonDark";
 import AboutSection from './components/AboutSection';
 import { useState } from 'react';
@@ -29,12 +29,12 @@ const Page: React.FC = () => {
         <section className="py-16 lg:py-32 flex flex-col justify-center items-center">
           <div className="container mx-auto px-4">
             <div className="lg:hidden">
-              <ColumnsPhotoAlbum photos={displayedPhotos}
+              <PhotoAlbum photos={displayedPhotos}
                 columns={2}
                 onClick={({ index }) => setIndex(index)} />
             </div>
             <div className="hidden lg:block">
-              <ColumnsPhotoAlbum photos={displayedPhotos}
+              <PhotoAlbum photos={displayedPhotos}
                 columns={3}
                 onClick={({ index }) => setIndex(index)} />
             </div>
