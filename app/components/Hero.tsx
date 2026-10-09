@@ -9,14 +9,14 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ imageUrl, imageAlt, heading, subheading }) => {
     return (
-        <section className="relative flex flex-col items-center justify-center min-h-screentext-center p-8 lg:h-[80vh]">
+        <section className="relative flex flex-col items-center justify-center min-h-screen text-center p-8 lg:h-[80vh]">
             <div className="w-full h-full absolute top-0 left-0 ">
                 <Image
                     src={imageUrl}
                     alt={imageAlt}
                     fill
                     style={{ objectFit: 'cover' }}
-                    quality={100}
+                    quality={90}
                     priority={true}
                 />
             </div>

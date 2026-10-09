@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import Hero from '../components/Hero';
 import { Fade } from "react-awesome-reveal";
 
@@ -27,9 +28,11 @@ const Page: React.FC = () => {
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col-reverse md:flex-row items-center">
                         <div className="mb-12 h-full w-full md:w-1/2 flex justify-center md:justify-end">
-                            <img
+                            <Image
                                 src="https://storage.googleapis.com/photo_website/about-2.jpg"
                                 alt="Glafira Veretennikova | real estate photographer"
+                                width={809}
+                                height={1200}
                                 className="w-[70%] m-auto object-cover rounded"
                             />
                         </div>
@@ -43,9 +46,8 @@ const Page: React.FC = () => {
                     </div>
                 </div>
             </section>
-
         </>
     );
 };
 
-export default Page;;
+export default Page;

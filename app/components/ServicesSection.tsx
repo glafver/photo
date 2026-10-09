@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const services = [
     {
@@ -34,11 +35,13 @@ const ServicesSection: React.FC = () => {
                                 </div>
                             </div>
                             <div className="flex-1 p-6 flex justify-center w-full aspect-[1.5]">
-                                <img
+                                <Image
                                     src={service.image}
                                     alt={service.alt}
+                                    width={1200}
+                                    height={800}
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                     className="w-full h-full object-cover rounded"
-                                    loading="lazy"
                                 />
                             </div>
                         </div>

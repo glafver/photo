@@ -2,6 +2,7 @@
 import Hero from '../components/Hero';
 import { Fade } from "react-awesome-reveal";
 import { FaCheck } from "react-icons/fa6";
+import Image from 'next/image';
 
 const tips = [
     {
@@ -117,11 +118,13 @@ const Page: React.FC = () => {
                                     </div>
                                 </div>
                                 <div className="flex-1 px-6 flex justify-center w-full aspect-[1.5]">
-                                    <img
+                                    <Image
                                         src={tip.image}
                                         alt={tip.alt}
+                                        width={1200}
+                                        height={800}
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                         className="w-full h-full object-cover rounded"
-                                        loading="lazy"
                                     />
                                 </div>
                             </div>

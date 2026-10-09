@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['storage.cloud.google.com', 'storage.googleapis.com'],
-    },
-    experimental: {
-        missingSuspenseWithCSRBailout: false,
+        remotePatterns: [
+            { protocol: 'https', hostname: 'storage.googleapis.com' },
+            { protocol: 'https', hostname: 'storage.cloud.google.com' },
+        ],
     },
 };
 

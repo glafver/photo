@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import ButtonDark from './ButtonDark';
 
 const title = "About Me";
@@ -19,9 +20,11 @@ const AboutSection: React.FC = () => {
                         <ButtonDark text="Read more" src='/about' />
                     </div>
                     <div className="mb-12 h-full w-full md:w-1/2 flex justify-center md:justify-end">
-                        <img
+                        <Image
                             src="https://storage.googleapis.com/photo_website/about-1.jpg"
                             alt="Glafira Veretennikova | real estate photographer"
+                            width={765}
+                            height={1200}
                             className="w-[70%] lg:w-1/2 object-cover rounded"
                         />
                     </div>

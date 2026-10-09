@@ -4,10 +4,13 @@ import { Fade } from "react-awesome-reveal";
 import { IoLogoInstagram } from "react-icons/io5";
 import { FaFacebookF, FaLinkedin } from "react-icons/fa6";
 import { MdOutlineEmail, MdLocalPhone } from "react-icons/md";
+import { siteConfig } from '../../lib/site';
 
 const contactsMap = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.599104369378!2d13.00075931592569!3d55.60587398052919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465397f63e1619ab%3A0x259675b1d673668b!2sVagnmakarebyn%203C%2C%20213%2077%20Malm%C3%B6%2C%20Sweden!5e0!3m2!1sen!2sus!4v1631293421931!5m2!1sen!2sus";
 
 const Page: React.FC = () => {
+    const { socials } = siteConfig;
+
     return (
         <>
             <Fade>
@@ -24,45 +27,30 @@ const Page: React.FC = () => {
                                 <h3 className='text-3xl font-semibold mb-6 font-cuba leading-[2]'>Contact me:</h3>
                                 <div className="flex justify-center md:justify-start gap-3 items-center">
                                     <MdOutlineEmail />
-                                    <a
-                                        href="mailto:glafira.se@gmail.com"
-                                        className=""
-                                    >
-                                        glafira.se@gmail.com
+                                    <a href={`mailto:${siteConfig.email}`}>
+                                        {siteConfig.email}
                                     </a>
                                 </div>
                                 <div className="mb-1 justify-center md:justify-start flex gap-3 items-center">
                                     <MdLocalPhone />
-                                    <a
-                                        href="tel:+46760558355"
-                                        className=""
-                                    >
-                                        +46760558355
+                                    <a href={siteConfig.phoneHref}>
+                                        {siteConfig.phone}
                                     </a>
                                 </div>
                                 <div className='mb-1 flex gap-2 justify-center md:justify-start items-center'>
-                                    <a
-                                        href="https://www.instagram.com/glafira_foto/"
-                                        className="text-xl"
-                                    >
+                                    <a href={socials.instagram.url} aria-label={socials.instagram.label} target="_blank" rel="noopener noreferrer" className="text-xl">
                                         <IoLogoInstagram />
                                     </a>
-                                    <a
-                                        href="https://www.facebook.com/glafver"
-                                        className=""
-                                    >
+                                    <a href={socials.facebook.url} aria-label={socials.facebook.label} target="_blank" rel="noopener noreferrer">
                                         <FaFacebookF />
                                     </a>
-                                    <a
-                                        href="https://www.linkedin.com/in/glafver/"
-                                        className="text-xl"
-                                    >
+                                    <a href={socials.linkedin.url} aria-label={socials.linkedin.label} target="_blank" rel="noopener noreferrer" className="text-xl">
                                         <FaLinkedin />
                                     </a>
                                 </div>
                                 <h3 className='text-3xl font-semibold mt-12 mb-6 font-cuba leading-[2]'>Book me:</h3>
-                                <p className='mb-4'>I am being part of a big team of professional photographers at <a href="https://se360.se/" className='font-bold'>SE360</a></p>
-                                <p>To book me just contact them by email <a href="mailto:bilder@se360.se" className="font-bold"> bilder@se360.se</a></p>
+                                <p className='mb-4'>I am being part of a big team of professional photographers at <a href={siteConfig.bookingUrl} className='font-bold' target="_blank" rel="noopener noreferrer">SE360</a></p>
+                                <p>To book me just contact them by email <a href={`mailto:${siteConfig.bookingEmail}`} className="font-bold"> {siteConfig.bookingEmail}</a></p>
                             </div>
                         </div>
                         <div>
@@ -73,11 +61,12 @@ const Page: React.FC = () => {
                                 className="border-0"
                                 allowFullScreen={true}
                                 loading="lazy"
+                                title="Map to Glafira Veretennikova's location"
                             ></iframe>
                         </div>
                     </div>
                 </section>
-            </Fade >
+            </Fade>
         </>
     );
 };

@@ -1,35 +1,72 @@
+import type { Metadata } from "next";
+import { Lexend } from "next/font/google";
 import "./globals.css";
 import "react-photo-album/columns.css";
 import "yet-another-react-lightbox/styles.css";
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { siteConfig } from "../lib/site";
 
-export const metadata = {
-  title: "Glafira Veretennikova | Real Estate Photographer in Malmö & Lund",
-  description:
-    "Professional real estate photography in Malmö, Lund, and Skåne. High-quality property images by Glafira Veretennikova.",
-  keywords:
-    "real estate photography, bostadsfotograf, Malmö, Lund, Skåne, property photography, interior photography, Glafira Veretennikova",
-  openGraph: {
-    type: "website",
-    title: "Glafira Veretennikova | Real Estate Photographer",
-    description:
-      "Professional real estate photography services in Malmö, Lund, and Skåne.",
-  },
+const lexend = Lexend({
+    subsets: ["latin"],
+    variable: "--font-lexend",
+    display: "swap",
+});
+
+export const metadata: Metadata = {
+    metadataBase: new URL(siteConfig.url),
+    title: {
+        default: siteConfig.title,
+        template: `%s | ${siteConfig.name}`,
+    },
+    description: siteConfig.description,
+    keywords: [
+        "real estate photography",
+        "bostadsfotograf",
+        "Malmö",
+        "Lund",
+        "Skåne",
+        "property photography",
+        "interior photography",
+        "Glafira Veretennikova",
+    ],
+    alternates: {
+        canonical: "/",
+    },
+    openGraph: {
+        type: "website",
+        title: siteConfig.title,
+        description: siteConfig.description,
+        url: siteConfig.url,
+        siteName: siteConfig.name,
+        images: [
+            {
+                url: "https://storage.googleapis.com/photo_website/photo_website-30.jpg",
+                width: 1200,
+                height: 800,
+                alt: "Glafira Veretennikova real estate photography",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: siteConfig.title,
+        description: siteConfig.description,
+    },
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en" className={lexend.variable}>
+            <body>
+                <Header />
+                {children}
+                <Footer />
+            </body>
+        </html>
+    );
 }

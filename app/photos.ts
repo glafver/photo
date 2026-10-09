@@ -1,4 +1,20 @@
-const photos = [
+export type Category =
+    | "living"
+    | "hall"
+    | "bedroom"
+    | "kitchen"
+    | "bathroom"
+    | "dusk"
+    | "outside";
+
+export interface Photo {
+    src: string;
+    width: number;
+    height: number;
+    category: Category;
+}
+
+const photos: Photo[] = [
     {
         src: "https://storage.googleapis.com/photo_website/photo_website-01.jpg",
         width: 790,
@@ -359,6 +375,17 @@ const photos = [
         height: 800,
         category: "hall"
     },
+];
+
+export const categories: { name: string; slug: Category | "all" }[] = [
+    { name: "All photos", slug: "all" },
+    { name: "Dusk photos", slug: "dusk" },
+    { name: "Kitchens", slug: "kitchen" },
+    { name: "Bedrooms", slug: "bedroom" },
+    { name: "Bathrooms", slug: "bathroom" },
+    { name: "Living rooms", slug: "living" },
+    { name: "Halls", slug: "hall" },
+    { name: "Outside", slug: "outside" },
 ];
 
 export default photos;
