@@ -5,8 +5,7 @@ import { IoLogoInstagram } from "react-icons/io5";
 import { FaFacebookF, FaLinkedin } from "react-icons/fa6";
 import { MdOutlineEmail, MdLocalPhone } from "react-icons/md";
 import { siteConfig } from '../../lib/site';
-
-const contactsMap = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.599104369378!2d13.00075931592569!3d55.60587398052919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465397f63e1619ab%3A0x259675b1d673668b!2sVagnmakarebyn%203C%2C%20213%2077%20Malm%C3%B6%2C%20Sweden!5e0!3m2!1sen!2sus!4v1631293421931!5m2!1sen!2sus";
+import ContactForm from '../components/ContactForm';
 
 const Page: React.FC = () => {
     const { socials } = siteConfig;
@@ -54,15 +53,7 @@ const Page: React.FC = () => {
                             </div>
                         </div>
                         <div>
-                            <iframe
-                                src={contactsMap}
-                                width="100%"
-                                height="450"
-                                className="border-0"
-                                allowFullScreen={true}
-                                loading="lazy"
-                                title="Map to Glafira Veretennikova's location"
-                            ></iframe>
+                            <ContactForm />
                         </div>
                     </div>
                 </section>
