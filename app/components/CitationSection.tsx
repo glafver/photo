@@ -7,7 +7,7 @@ const CitationSection: React.FC = () => {
                 <blockquote className="text-xl lg:text-2xl italic max-w-2xl mx-auto">
                     &quot;Photography captures the character of a home, turning everyday moments into lasting memories. <br /> I help make those moments stand out.&quot;
                 </blockquote>
-                <p className="mt-4 text-end text-lg "> Glafira Veretennikova, photographer</p>
+                <p className="mt-4 text-end text-lg text-brand-600"> Glafira Veretennikova, photographer</p>
             </div>
         </section>
     );

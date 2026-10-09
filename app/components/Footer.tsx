@@ -37,13 +37,13 @@ const Footer: React.FC = () => {
                             </a>
                         </div>
                         <div className='mb-1 flex gap-2 justify-center md:justify-start items-center'>
-                            <a href={socials.instagram.url} aria-label={socials.instagram.label} target="_blank" rel="noopener noreferrer" className="text-xl">
+                            <a href={socials.instagram.url} aria-label={socials.instagram.label} target="_blank" rel="noopener noreferrer" className="text-xl hover:text-pastel-peach">
                                 <IoLogoInstagram />
                             </a>
-                            <a href={socials.facebook.url} aria-label={socials.facebook.label} target="_blank" rel="noopener noreferrer">
+                            <a href={socials.facebook.url} aria-label={socials.facebook.label} target="_blank" rel="noopener noreferrer" className="hover:text-pastel-peach">
                                 <FaFacebookF />
                             </a>
-                            <a href={socials.linkedin.url} aria-label={socials.linkedin.label} target="_blank" rel="noopener noreferrer" className="text-xl">
+                            <a href={socials.linkedin.url} aria-label={socials.linkedin.label} target="_blank" rel="noopener noreferrer" className="text-xl hover:text-pastel-peach">
                                 <FaLinkedin />
                             </a>
                         </div>

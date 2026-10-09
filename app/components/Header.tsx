@@ -44,7 +44,7 @@ const Header = () => {
                             onClick={closeMenu}
                             href={link.href}
                             aria-current={isActive(link.href) ? "page" : undefined}
-                            className={`block p-4 lg:p-0 ${isActive(link.href) ? 'font-bold underline' : ''}`}
+                            className={`block p-4 lg:p-0 ${isActive(link.href) ? 'font-bold underline text-brand-600 hover:text-brand-600' : ''}`}
                         >
                             {link.label}
                         </Link>
@@ -57,7 +57,7 @@ const Header = () => {
                             key={link.href}
                             href={link.href}
                             aria-current={isActive(link.href) ? "page" : undefined}
-                            className={isActive(link.href) ? 'underline font-bold text-stone-800' : ''}
+                            className={isActive(link.href) ? 'underline font-bold text-brand-600 hover:text-brand-600' : ''}
                         >
                             {link.label}
                         </Link>
