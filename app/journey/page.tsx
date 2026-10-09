@@ -1,7 +1,7 @@
 "use client";
 import { Fade } from "react-awesome-reveal";
 import Hero from "../components/Hero";
-import StatsCounter from "../components/StatsCounter";
+import StatsBand from "../components/StatsBand";
 import BarChart from "../components/BarChart";
 import DonutChart from "../components/DonutChart";
 import ButtonDark from "../components/ButtonDark";
@@ -40,12 +40,7 @@ const Page: React.FC = () => {
                         <h2 className="text-2xl lg:text-3xl font-cuba text-center mb-12">
                             A few numbers I’m proud of
                         </h2>
-                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-                            <StatsCounter value={stats.years} label="years behind the camera" />
-                            <StatsCounter value={stats.totalBookings} label="homes photographed" />
-                            <StatsCounter value={stats.totalImages} label="photos delivered" />
-                            <StatsCounter value={stats.brokers} label="agents who trusted me" />
-                        </div>
+                        <StatsBand />
                     </div>
                 </section>
             </Fade>
