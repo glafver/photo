@@ -8,7 +8,10 @@ const p1 = `I’m a passionate photographer who loves capturing the beauty of ho
 
 const p2 = `Alongside my photography, I’m also a frontend developer. I love to combine my creative and technical skills. With over 15 years of experience in administration and management, I’ve honed my organizational and problem-solving abilities.`;
 
-const p3 = `I’m 36 years old and currently based in Malmö, Sweden. I relocated here five years ago from St. Petersburg, Russia. Fluent in both Swedish and English, I enjoy connecting with people from different backgrounds. I believe in kindness, respect, and finding common ground, which guide me in both my personal and professional life.`;
+const birthYear = 1988;
+const age = new Date().getFullYear() - birthYear;
+
+const p3 = `I’m ${age} years old and currently based in Malmö, Skåne, Sweden. I relocated here five years ago from St. Petersburg, Russia. Fluent in both Swedish and English, I enjoy connecting with people from different backgrounds. I believe in kindness, respect, and finding common ground, which guide me in both my personal and professional life.`;
 
 const p4 = `Traveling and exploring new cultures are my other passions. I love seeing how different people live and drawing inspiration from the world around me. Whether I’m behind the camera or coding a new project, I aim to create beauty and share warmth in everything I do.`;
 
