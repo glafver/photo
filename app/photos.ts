@@ -12,9 +12,22 @@ export interface Photo {
     width: number;
     height: number;
     category: Category;
+    alt: string;
 }
 
-const photos: Photo[] = [
+type RawPhoto = Omit<Photo, "alt">;
+
+const categoryLabels: Record<Category, string> = {
+    living: "Living room",
+    hall: "Hall",
+    bedroom: "Bedroom",
+    kitchen: "Kitchen",
+    bathroom: "Bathroom",
+    dusk: "Dusk",
+    outside: "Exterior",
+};
+
+const rawPhotos: RawPhoto[] = [
     {
         src: "https://storage.googleapis.com/photo_website/photo_website-01.jpg",
         width: 790,
@@ -376,6 +389,11 @@ const photos: Photo[] = [
         category: "hall"
     },
 ];
+
+const photos: Photo[] = rawPhotos.map((photo) => ({
+    ...photo,
+    alt: `${categoryLabels[photo.category]} real estate photography by Glafira Veretennikova`,
+}));
 
 export const categories: { name: string; slug: Category | "all" }[] = [
     { name: "All photos", slug: "all" },

@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
                     </Link>
                     <div className="flex flex-col justify-center items-center md:items-start">
                         {siteConfig.navLinks.map((link) => (
-                            <Link key={link.href} href={link.href} aria-label={link.label}>
+                            <Link key={link.href} href={link.href}>
                                 {link.label}
                             </Link>
                         ))}

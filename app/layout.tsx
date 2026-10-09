@@ -6,6 +6,7 @@ import "yet-another-react-lightbox/styles.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { siteConfig } from "../lib/site";
+import { personSchema, professionalServiceSchema } from "../lib/schema";
 
 const lexend = Lexend({
     subsets: ["latin"],
@@ -63,8 +64,22 @@ export default function RootLayout({
     return (
         <html lang="en" className={lexend.variable}>
             <body>
+                <a
+                    href="#main-content"
+                    className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:rounded focus:text-stone-800"
+                >
+                    Skip to content
+                </a>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
+                />
                 <Header />
-                {children}
+                <main id="main-content">{children}</main>
                 <Footer />
             </body>
         </html>
