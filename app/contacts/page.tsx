@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import Hero from '../components/Hero';
 import { Fade } from "react-awesome-reveal";
 import { IoLogoInstagram } from "react-icons/io5";
@@ -50,6 +51,15 @@ const Page: React.FC = () => {
                                 <h3 className='text-3xl font-semibold mt-12 mb-6 font-cuba leading-[2]'>Book me:</h3>
                                 <p className='mb-4'>I am being part of a big team of professional photographers at <a href={siteConfig.bookingUrl} className='font-bold' target="_blank" rel="noopener noreferrer">SE360</a></p>
                                 <p>To book me just contact them by email <a href={`mailto:${siteConfig.bookingEmail}`} className="font-bold"> {siteConfig.bookingEmail}</a></p>
+                                <a href={siteConfig.bookingUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-6">
+                                    <Image
+                                        src="/se360-logo.png"
+                                        alt="SE360"
+                                        width={532}
+                                        height={464}
+                                        className="w-32 lg:w-36 h-auto"
+                                    />
+                                </a>
                             </div>
                         </div>
                         <div>
