@@ -96,13 +96,13 @@ const Page: React.FC = () => {
                     subheading="Discover easy and thoughtful tips to beautifully prepare your space for photography, making it feel inviting and picture-perfect"
                 />
             </Fade>
-            <section className="py-16 lg:py-32 ">
+            <section className="py-16 lg:py-32 bg-gradient-to-b from-white to-greige-100">
                 <div className="container mx-auto px-4">
                     <div className="space-y-6">
                         {tips.map((tip, index) => (
                             <div
                                 key={tip.id}
-                                className={`py-6 lg:py-12 flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse bg-greige-100' : 'md:flex-row bg-white'} items-center`}
+                                className={`py-6 lg:py-12 flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center`}
                             >
                                 <div className="flex-1 p-6 flex items-center">
                                     <div className="text-left">
@@ -110,7 +110,7 @@ const Page: React.FC = () => {
                                         <ul className="list-none pl-0">
                                             {tip.tips.map((item, idx) => (
                                                 <li key={idx} className="flex items-start mb-3">
-                                                    <span className="md:text-2xl mr-6 text-neutral-500"><FaCheck /></span>
+                                                    <span className="md:text-2xl mr-6 text-brand-600"><FaCheck /></span>
                                                     {item}
                                                 </li>
                                             ))}
