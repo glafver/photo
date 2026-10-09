@@ -20,7 +20,7 @@ const Page: React.FC = () => {
                     heading="Let’s Connect!"
                     subheading="I’m excited to hear from you! Whether you’re interested in booking, don’t hesitate to reach out."
                 />
-                <section className="py-16 lg:py-32 bg-neutral-200">
+                <section className="py-16 lg:py-32 bg-gradient-to-b from-pastel-sky/15 to-pastel-cream">
                     <div className='px-4 container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6'>
                         <div>
                             <div className="text-center md:text-left mb-4 md:mb-0">

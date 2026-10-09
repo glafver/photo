@@ -24,7 +24,7 @@ const Page: React.FC = () => {
                     subheading="I cherish the moments spent capturing the heart and soul of every home."
                 />
             </Fade>
-            <section className="py-16 lg:py-32 bg-neutral-100">
+            <section className="py-16 lg:py-32 bg-gradient-to-b from-pastel-cream to-pastel-blush/15">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col-reverse md:flex-row items-center">
                         <div className="mb-12 h-full w-full md:w-1/2 flex justify-center md:justify-end">

@@ -11,7 +11,7 @@ const p_1 = `
 
 const AboutSection: React.FC = () => {
     return (
-        <section className="py-16 lg:py-32 bg-neutral-100">
+        <section className="py-16 lg:py-32 bg-gradient-to-b from-pastel-lavender/15 to-pastel-cream">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col-reverse md:flex-row items-center">
                     <div className="md:w-1/2 p-6">

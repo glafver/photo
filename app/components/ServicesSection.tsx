@@ -20,7 +20,7 @@ const services = [
 
 const ServicesSection: React.FC = () => {
     return (
-        <section className="py-16 lg:py-32 bg-neutral-100">
+        <section className="py-16 lg:py-32 bg-gradient-to-b from-pastel-cream to-pastel-sage/15">
             <div className="container mx-auto px-4">
                 <div className="space-y-8">
                     {services.map((service, index) => (
