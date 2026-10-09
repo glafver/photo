@@ -1,6 +1,6 @@
 # Glafira Veretennikova — Real Estate Photography Portfolio
 
-Professional real estate photography website for Glafira Veretennikova, based in Malmö & Lund, Sweden.
+Professional real estate photography website for Glafira Veretennikova, based in Skåne, Sweden.
 
 ## Tech stack
 
@@ -25,16 +25,24 @@ Open [http://localhost:3000](http://localhost:3000).
 - `app/` — pages and components (App Router)
   - `photos.ts` — photo data (categories, dimensions, URLs)
   - `layout.tsx` — root layout, global metadata and fonts
-  - `portfolio/`, `about/`, `contacts/`, `staging_tips/` — routes
-  - `components/` — shared components (Header, Footer, Hero, etc.)
+  - `portfolio/`, `about/`, `contacts/`, `staging_tips/`, `journey/` — routes
+  - `components/` — shared components (Header, Footer, Hero, charts, form, etc.)
   - `robots.ts`, `sitemap.ts` — SEO files
-- `lib/site.ts` — single source of truth for site config (contacts, socials, URL)
-- `public/` — static assets
+  - `not-found.tsx` — custom 404 page
+- `lib/site.ts` — site config (contacts, social links, production URL, navigation)
+- `lib/stats.ts` — statistics data (bookings, property types, firms, locations)
+- `lib/schema.ts` — JSON-LD structured data (SEO)
+- `public/` — static assets (favicon, SE360 logo)
 
 ## Configuration
 
-Update `lib/site.ts` to change contact details, social links and the production URL
-(used by SEO metadata, sitemap and robots.txt).
+- `lib/site.ts` — contact details, social links and the production URL.
+- `lib/stats.ts` — the statistics shown on the home and Journey pages.
+
+## Forms
+
+The contact form on the Contacts page uses [Netlify Forms](https://docs.netlify.com/forms/setup/)
+(`data-netlify` attribute). Submissions appear in the Netlify dashboard under **Forms**.
 
 ## Build & deploy
 
