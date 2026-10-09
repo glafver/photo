@@ -37,6 +37,15 @@ export const stats = {
         { type: "Summer houses & other", count: 15, percentage: 1, color: "#e9c4cd" },
     ],
 
+    firms: [
+        { name: "Bjurfors", count: 755, percentage: 71, color: "#94354f" },
+        { name: "Länsförsäkringar", count: 124, percentage: 12, color: "#ad4d68" },
+        { name: "Fastighetsbyrån", count: 61, percentage: 6, color: "#c57388" },
+        { name: "MOHV", count: 46, percentage: 4, color: "#d99fad" },
+        { name: "Våningen & Villan", count: 16, percentage: 2, color: "#e9c4cd" },
+        { name: "Other firms", count: 53, percentage: 5, color: "#cfc7ba" },
+    ],
+
     topLocations: [
         { city: "Malmö", bookings: 472 },
         { city: "Lund", bookings: 280 },
