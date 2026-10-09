@@ -19,16 +19,20 @@ const ContactForm: React.FC = () => {
         });
 
         try {
-            await fetch("/__forms.html", {
+            const response = await fetch("/__forms.html", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: body.toString(),
             });
+            if (!response.ok) {
+                throw new Error(`Form submission failed with status ${response.status}`);
+            }
             setStatus("success");
             setName("");
             setEmail("");
             setMessage("");
-        } catch {
+        } catch (error) {
+            console.error("Form submission error:", error);
             setStatus("error");
         }
     };
