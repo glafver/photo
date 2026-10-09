@@ -13,14 +13,13 @@ const ContactForm: React.FC = () => {
 
         const body = new URLSearchParams({
             "form-name": "contact",
-            "bot-field": "",
             name,
             email,
             message,
         });
 
         try {
-            await fetch("/", {
+            await fetch("/__forms.html", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: body.toString(),
@@ -61,13 +60,10 @@ const ContactForm: React.FC = () => {
             <form
                 name="contact"
                 method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
                 className="space-y-5"
             >
                 <input type="hidden" name="form-name" value="contact" />
-                <input type="hidden" name="bot-field" />
                 <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-1 text-neutral-700">
                         Name
