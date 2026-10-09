@@ -38,10 +38,10 @@ const Page: React.FC = () => {
                         </div>
                         <div className="md:w-1/2 p-6">
                             <h3 className="text-3xl font-semibold mb-12 font-cuba text-center leading-[2]">{title}</h3>
-                            <p className="mb-6">{p1}</p>
-                            <p className="mb-6">{p2}</p>
-                            <p className="mb-6">{p3}</p>
-                            <p className="mb-6">{p4}</p>
+                            <p className="mb-6 text-lg leading-relaxed text-neutral-700">{p1}</p>
+                            <p className="mb-6 text-lg leading-relaxed text-neutral-700">{p2}</p>
+                            <p className="mb-6 text-lg leading-relaxed text-neutral-700">{p3}</p>
+                            <p className="mb-6 text-lg leading-relaxed text-neutral-700">{p4}</p>
                         </div>
                     </div>
                 </div>

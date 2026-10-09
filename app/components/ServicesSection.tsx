@@ -30,8 +30,8 @@ const ServicesSection: React.FC = () => {
                         >
                             <div className="flex-1 p-6 flex items-center">
                                 <div className="text-center">
-                                    <h3 className="text-xl font-semibold mb-2 font-cuba">{service.title}</h3>
-                                    <p>{service.description}</p>
+                                    <h3 className="text-2xl lg:text-3xl font-semibold mb-3 font-cuba">{service.title}</h3>
+                                    <p className="text-lg leading-relaxed text-neutral-700">{service.description}</p>
                                 </div>
                             </div>
                             <div className="flex-1 p-6 flex justify-center w-full aspect-[1.5]">

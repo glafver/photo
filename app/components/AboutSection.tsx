@@ -15,8 +15,8 @@ const AboutSection: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col-reverse md:flex-row items-center">
                     <div className="md:w-1/2 p-6">
-                        <h3 className="text-xl font-semibold mb-2 font-cuba text-center">{title}</h3>
-                        <p className="">{p_1}</p>
+                        <h3 className="text-2xl lg:text-3xl font-semibold mb-4 font-cuba text-center">{title}</h3>
+                        <p className="text-lg lg:text-xl leading-relaxed text-neutral-700">{p_1}</p>
                         <ButtonDark text="Read more" src='/about' />
                     </div>
                     <div className="mb-12 h-full w-full md:w-1/2 flex justify-center md:justify-end">
