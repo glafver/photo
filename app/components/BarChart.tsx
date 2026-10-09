@@ -1,8 +1,14 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
+interface BarDatum {
+    label: string;
+    value: number;
+    note?: string;
+}
+
 interface BarChartProps {
-    data: { label: string; value: number }[];
+    data: BarDatum[];
     format?: (n: number) => string;
 }
 
@@ -34,11 +40,16 @@ const BarChart: React.FC<BarChartProps> = ({ data, format = (n) => String(n) }) 
                     <span className="text-[11px] lg:text-xs text-neutral-500 tabular-nums">{format(d.value)}</span>
                     <div className="w-full flex items-end h-40 lg:h-52">
                         <div
-                            className="w-full rounded-t bg-stone-400 transition-[height] duration-700 ease-out"
+                            className={`w-full rounded-t transition-[height] duration-700 ease-out ${
+                                d.note ? "bg-brand-200" : "bg-brand-500"
+                            }`}
                             style={{ height: inView ? `${(d.value / max) * 100}%` : "0%" }}
                         />
                     </div>
                     <span className="text-[10px] lg:text-xs text-neutral-600 whitespace-nowrap">{d.label}</span>
+                    {d.note && (
+                        <span className="text-[9px] lg:text-[10px] text-brand-600 italic -mt-1">{d.note}</span>
+                    )}
                 </div>
             ))}
         </div>

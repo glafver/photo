@@ -12,7 +12,7 @@ export const stats = {
         { label: "2023", value: 118 },
         { label: "2024", value: 217 },
         { label: "2025", value: 273 },
-        { label: "2026", value: 119 },
+        { label: "2026", value: 119, note: "in progress" },
     ],
 
     // Bookings per calendar month

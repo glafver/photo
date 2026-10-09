@@ -45,7 +45,7 @@ const StatsCounter: React.FC<StatsCounterProps> = ({ value, suffix = "", label }
 
     return (
         <div ref={ref} className="text-center">
-            <div className="text-4xl lg:text-5xl font-semibold tabular-nums">
+            <div className="text-4xl lg:text-5xl font-semibold tabular-nums text-brand-600">
                 {display.toLocaleString("en-US")}
                 {suffix}
             </div>
