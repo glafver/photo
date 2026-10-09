@@ -17,7 +17,7 @@ import photos from "./photos";
 
 const Page: React.FC = () => {
   const [index, setIndex] = useState(-1);
-  const displayedPhotos = photos.slice(0, 20);
+  const displayedPhotos = photos.slice(0, 12);
 
   return (
     <>
