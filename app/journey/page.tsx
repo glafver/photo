@@ -16,7 +16,7 @@ const Page: React.FC = () => {
                 <Hero
                     imageUrl="https://storage.googleapis.com/photo_website/photo_website-38.jpg"
                     imageAlt="Warm dusk light over a photographed home in Skåne"
-                    heading="My Journey"
+                    heading="My Professional Journey"
                     subheading="Six years, over a thousand homes, and countless stories captured through my lens."
                 />
             </Fade>

@@ -39,7 +39,7 @@ function PortfolioGallery() {
                 <Hero
                     imageUrl="https://storage.googleapis.com/photo_website/photo_website-26.jpg"
                     imageAlt="Beautiful modern home in real estate photography"
-                    heading="Welcome to My Photography Journey"
+                    heading="Welcome to My Photography Portfolio"
                     subheading="I love capturing the essence of homes. Explore my portfolio to see the spaces that inspire me and the stories they tell."
                 />
                 <div className='md:hidden py-8 flex items-center gap-8 justify-center'>
