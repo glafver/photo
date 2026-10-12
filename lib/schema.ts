@@ -12,7 +12,6 @@ export const personSchema = {
     name: siteConfig.name,
     jobTitle: "Real Estate Photographer",
     email: siteConfig.email,
-    telephone: siteConfig.phone,
     url: siteConfig.url,
     image: "https://storage.googleapis.com/photo_website/about-1.jpg",
     address: {
@@ -30,7 +29,6 @@ export const professionalServiceSchema = {
     name: `${siteConfig.name} Photography`,
     description: siteConfig.description,
     url: siteConfig.url,
-    telephone: siteConfig.phone,
     email: siteConfig.email,
     image: "https://storage.googleapis.com/photo_website/photo_website-30.jpg",
     priceRange: "$$",

@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import { Fade } from "react-awesome-reveal";
 import { IoLogoInstagram } from "react-icons/io5";
 import { FaFacebookF, FaLinkedin } from "react-icons/fa6";
-import { MdOutlineEmail, MdLocalPhone } from "react-icons/md";
+import { MdOutlineEmail } from "react-icons/md";
 import { siteConfig } from '../../lib/site';
 import ContactForm from '../components/ContactForm';
 
@@ -29,12 +29,6 @@ const Page: React.FC = () => {
                                     <MdOutlineEmail />
                                     <a href={`mailto:${siteConfig.email}`}>
                                         {siteConfig.email}
-                                    </a>
-                                </div>
-                                <div className="mb-1 justify-center md:justify-start flex gap-3 items-center">
-                                    <MdLocalPhone />
-                                    <a href={siteConfig.phoneHref}>
-                                        {siteConfig.phone}
                                     </a>
                                 </div>
                                 <div className='mb-1 flex gap-2 justify-center md:justify-start items-center'>
